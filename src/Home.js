@@ -244,7 +244,9 @@ class Home extends React.Component {
                        <h3>Servers </h3>
                        <hr/>
                         <CreateServerModal addNewServer={this.addNewServer}/>
+                        <div className="serverSectionContainer">
                         { server_list }
+                        </div>
               </div>
 
               <div className="rooms">
@@ -254,7 +256,9 @@ class Home extends React.Component {
                       <hr/>
                       <CreateRoomModal addNewRoom={this.addNewRoom}/>
                     </h3>
+                    <div className="roomSectionContainer">
                     {room_list}
+                    </div>
 
               </div>
                
@@ -263,7 +267,7 @@ class Home extends React.Component {
                 <div className="mainChatWrapper">
 
                   <section className="chatRoom">
-                      <h1>{this.state.user_name}({this.state.user_lang})</h1>
+
                       {messages_list}
 
                   </section>
@@ -282,8 +286,8 @@ class Home extends React.Component {
                   {/* <h3>Welcome To Teams</h3> */}
                   
                     <div className= "memberTeamOptions">
-                      <img   className="imageTeamSection" src="images/codi.jpg" alt="batata"/>
-                      <label className="usernameTeamSection">ahmad</label>
+                      <img   className="imageTeamSection" src="images/1codi.jpg" alt="batata"/>
+                      <label className="usernameTeamSection">{this.state.user_name}({this.state.user_lang})</label>
                       <TeamOptions />
                       <label className="roleTeamSection">Team Leader</label>
                     </div>
@@ -293,6 +297,15 @@ class Home extends React.Component {
                       {/* {users_list} */}
                       {/* {this.state.user_name}({this.state.user_lang}) */}
                   <div className="teamMembers">
+                    <div className="teamMember">
+                        <p className="memberUsername">Ahmad(en)</p>
+                    </div>
+                    <div className="teamMember">
+                        <p className="memberUsername">Ahmad(en)</p>
+                    </div>
+                    <div className="teamMember">
+                        <p className="memberUsername">Ahmad(en)</p>
+                    </div>
                     <div className="teamMember">
                         <p className="memberUsername">Ahmad(en)</p>
                     </div>

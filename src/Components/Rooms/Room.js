@@ -9,7 +9,7 @@ return(
         <div className="room-name">
          <div className=""singleRoom>
             <Button bsStyle="info" className="roomNameButton">
-                {roomname}
+                <label className="roomName">{roomname}</label>
                 <Button bsStyle="danger" onClick={removeRoom}className="roomCancelButton">X</Button>
             </Button>
          </div>

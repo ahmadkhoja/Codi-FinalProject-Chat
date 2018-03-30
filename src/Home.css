@@ -19,24 +19,21 @@ body {
 .wrapper {
   display: grid;
   grid-template-columns: 10% 13% 57% 20%;
-  grid-template-rows: repeat(1, 601px);
+  grid-template-rows: repeat(1, 626px);
+  
 }
 .block{
   border: 1px solid red;
   text-align: center;
 }
-.servers{
-  /* grid-column: 1/2 ; */
+/* .servers{
 }
 .rooms{
-  /* grid-column: 2/3 ; */
 }
 .mainChat{
-  /* grid-column: 3 / 10; */
 }
 .teams{
-  /* grid-column: 10 / 11; */
-}
+} */
 /* .chatServersWrapper{
   display: grid;
   grid-column: 1;
@@ -114,10 +111,15 @@ body {
   height: 50px;
   position: relative;
 }
+.roomName{
+  width: 80%;
+  overflow: hidden;
+}
 .roomCancelButton{
   position: absolute;
   right: 0px;
   top: 10px;
+  width: 20%;
 }
 .navbar-default{
   background-color: #4B90C9;
@@ -215,10 +217,11 @@ button.serverNameButton.btn.btn-info:hover {
   max-width: 25%;
   max-height: 50px;
 }
-.usernameTeamSection{
+.usernameTeamSection {
   float: left;
-  width: 35%;
+  width: 50%;
   text-align: center;
+  color: green;
 }
 .optionTeamSection{
   float: right;
@@ -240,11 +243,11 @@ button.serverNameButton.btn.btn-info:hover {
   color: white;
 }
 .roleTeamSection{
-  /* float: left; */
-  position: absolute;
+   float: left; 
+   position: absolute;
   left: 0px;
   top: 30px;
-  width:10%;
+  width:10%; 
 }
 .red {
   background-color: red;
@@ -284,22 +287,25 @@ button.btn.btn-primary.batata{
   background-color: green;
   height: 80%;
 }
-.teamMember{
+.teamMember {
+  /* margin-top: 5px; */
   position: relative;
   background-color: green;
-  height: 50px;
+  height: 10%;
   width: 100%;
+  /* left: 50px; */
 }
-.memberUsername{
-  width: 75%;
-  height: 50px;
+.memberUsername {
+  width: 100%;
   background-color: rgb(19, 102, 179);
-  float: left;
+  /* float: left; */
   border-radius: 20px;
   color: white;
   font-size: 16px;
   text-align: center;
   padding-top: 10px;
+  position: absolute;
+  top: 10px;
 }
 .memberImage {
   width: 25%;
@@ -307,3 +313,78 @@ button.btn.btn-primary.batata{
   float: left;
   border-radius: 40%;
 }
+
+@media only screen and (max-width: 840px) {
+    .wrapper{
+      display: grid;
+      /* grid-template-columns: 12% 13% 57% 20%; */
+      /* grid-template-rows: repeat(1, 601px); */
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 2fr 3fr;
+      grid-template-areas: 
+      "servers servers servers servers"
+      "rooms mainChat mainChat mainChat"
+      "teams teams teams teams" 
+    }
+    .servers {
+      grid-column: 1; 
+      display: inline-block; 
+      text-align: center; 
+      height: 100px auto;
+      background-color: #FFC654;
+      width: 100%;
+      grid-area: servers;
+    }
+    .rooms{
+      grid-area: rooms;
+    }
+    .mainChat{
+      grid-area: mainChat;
+      
+    }
+    .chatRoom{
+      background-color: #FFD554;
+      height: 345px;
+      overflow: scroll;
+    }
+    .teams{
+      margin-top: 5px;
+      grid-area: teams;
+    } 
+    .ServerSection {
+      margin-top: 10px;
+      height: auto;
+      max-width: 20%;
+      float: right;
+    }
+    .serverSectionContainer {
+      width: 100%;
+      overflow-x: scroll;
+      height: 100px;
+    }
+    .roomSectionContainer{
+      width: 100%;
+      overflow: scroll;
+      height: 300px;
+    }
+    .roleTeamSection{
+      /* it's here for a reason */
+    }
+    .addServer{
+      margin: 0px;
+      height: 30px;
+      width: 80%;
+      left: 10%;
+    }
+    .server-name{
+      width: 75%;
+      height: 100%;
+      position: relative;
+    }
+
+}
+
+/* 
+
+
+*/
