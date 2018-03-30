@@ -1,0 +1,309 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+  width: 100%;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 10% 13% 57% 20%;
+  grid-template-rows: repeat(1, 601px);
+}
+.block{
+  border: 1px solid red;
+  text-align: center;
+}
+.servers{
+  /* grid-column: 1/2 ; */
+}
+.rooms{
+  /* grid-column: 2/3 ; */
+}
+.mainChat{
+  /* grid-column: 3 / 10; */
+}
+.teams{
+  /* grid-column: 10 / 11; */
+}
+/* .chatServersWrapper{
+  display: grid;
+  grid-column: 1;
+  height: 100%;
+} */
+.servers{
+  position: relative;
+  /* grid-column: 1; */
+  display: inline-block;
+  text-align: center;
+  height: 58px auto;
+  background-color: #FFC654
+}
+.rooms{
+  position: relative;
+  grid-column: 2 / 3;
+  display: inline-block;
+  text-align: center;
+  height: 58px auto;
+  background-color: #44B0C4
+}
+.ServerSection {
+  margin-top: 10px;
+  height: auto;
+  max-width: 100%;
+}
+
+.ServerSection h3{
+  margin:0;
+}
+
+.RoomSection{
+  margin-top: 10px;
+  height:50px;
+}
+.RoomSection h3{
+  margin:0;
+}
+.server-icon{
+  width:67%;
+  height:60px;
+  border-radius: 50%;
+  background: red;
+  float:right;
+  /* position: absolute; */
+}
+.addServer{
+  margin: 0px;
+  height: 30px;
+  width: 80%;
+}
+.server-name{
+  width: 100%;
+  height: 65px;
+  position: relative;
+  /* float: left; */
+}
+.room-name{
+  width: 100%;
+}
+/* .serverNameButton{
+  width: 70%;
+  position: absolute;
+  left: 0;
+} */
+.removeServerButton{
+    width: 10%;
+    position: absolute;
+    left: 0px;
+}
+
+.roomNameButton{
+  text-align: left;
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+.roomCancelButton{
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+.navbar-default{
+  background-color: #4B90C9;
+}
+.navbar-default .navbar-nav>li>a {
+  color: white;
+}
+.navbar-default .navbar-nav>li>a:hover{
+  background-color: rgb(68, 228, 90);
+  transition-duration: 0.8s;
+  color: white;
+}
+.chatRoom{
+  background-color: #FFD554;
+  height: 90%;
+  overflow: scroll;
+}
+.singleMessage{
+  width: 98%;
+  background-color: #4B90C9;
+  float: left;
+  margin: 10px;
+  border-radius: 20px;
+}
+.messageImage{
+  float: left;
+  border-radius: 50%;
+  max-width: 9%;
+  max-height: 50px;
+}
+.bodyText{
+  float: left;
+  width: 90%;
+  height: 50px;
+  text-align: left;
+  padding: 10px 10px;
+  color: white;
+}
+.mainChatWrapper{
+  height: 100%;
+}
+.inputField{
+  background-color: blue;
+  height: 10%;
+}
+.inputForm{
+  /* height: 20%; */
+  height: 100%;
+}
+.type{
+  width: 80%;
+  padding: 18px;
+  float: left;
+  height: 100%;
+}
+
+.send{
+  width: 20%;
+  height: 100%;
+  border: none;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.send:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+.navbar-default .navbar-brand{
+  color: white;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+button.serverNameButton.btn.btn-info:hover {
+  background-color: rgb(228, 56, 26);
+}
+/* .teamWrapper{
+  height: 100px;
+} */
+.memberTeamOptions{
+  position: relative;
+  height: 20%;
+}
+.imageTeamSection{
+  float: left;
+  border-radius: 50%;
+  max-width: 25%;
+  max-height: 50px;
+}
+.usernameTeamSection{
+  float: left;
+  width: 35%;
+  text-align: center;
+}
+.optionTeamSection{
+  float: right;
+  width: 40px;
+  position: absolute;
+  right: 0px;
+  /* width: 20%; */
+  height: 40px;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  /* padding: 16px 32px; */
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.optionTeamSection:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.roleTeamSection{
+  /* float: left; */
+  position: absolute;
+  left: 0px;
+  top: 30px;
+  width:10%;
+}
+.red {
+  background-color: red;
+  float: none;
+  /* position: absolute;
+  bottom: 0px; */
+  height: 1px;
+  width: 100%;
+  margin: 0px;
+}
+
+/* button.serverNameButton.btn.btn-info:hover {
+  transition: 0.2s;
+  width: 100%;
+  /* background-color: blue; */
+  /* transition-timing-function: linear; */
+/* } */ */
+.btn-toolbar .btn, .btn-toolbar .btn-group, .btn-toolbar .input-group {
+  float:none;
+}
+.roomCancelButton .btn-group>.btn:first-child {
+    margin-left: 0;
+    padding: 0px 8px;
+}
+
+.addServer{
+  position: relative;
+  width: 100%;
+}
+button.btn.btn-primary.batata{
+  width: 100%;
+  position: absolute;
+  left: 0px; 
+}
+.teamMembers{
+  position: relative;
+  background-color: green;
+  height: 80%;
+}
+.teamMember{
+  position: relative;
+  background-color: green;
+  height: 50px;
+  width: 100%;
+}
+.memberUsername{
+  width: 75%;
+  height: 50px;
+  background-color: rgb(19, 102, 179);
+  float: left;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 10px;
+}
+.memberImage {
+  width: 25%;
+  height: 50px;
+  float: left;
+  border-radius: 40%;
+}
